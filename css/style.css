@@ -1051,7 +1051,6 @@ h2 {
 }
 
 .home-text {
-
 }
 
 @media (max-width: 767px) {
@@ -1064,4 +1063,129 @@ h2 {
   .home-section .home-text h1 {
     font-size: 30px;
   }
+}
+
+/* Modal */
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 90px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.custom-modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.custom-modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+.custom-modal-close {
+  position: absolute;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.custom-modal-close:hover,
+.custom-modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+/* Facebook Popup */
+.facebook-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00285c;
+  color: white;
+  padding: 11px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.facebook-popup:hover {
+  background-color: #00285c;
+}
+
+.facebook-popup i {
+  font-size: 30px;
+}
+
+.facebook-popup::after {
+  content: "Facebook Page";
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #00285c;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-bottom: 10px;
+}
+
+.facebook-popup::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-bottom: 5px;
+}
+
+.facebook-popup:hover::after,
+.facebook-popup:hover::before {
+  opacity: 1;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+}
+
+.image-to-popup:hover {
+  animation: shake 1s;
+  animation-iteration-count: 1;
 }
