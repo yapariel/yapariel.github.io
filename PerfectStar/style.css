@@ -714,13 +714,15 @@ body {
   text-align: left;
   z-index: 3;
   border-radius: 30px;
-  background: #1a76d1;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
+
 .schedule .single-schedule .inner {
   overflow: hidden;
   position: relative;
@@ -737,7 +739,7 @@ body {
   margin: 0 auto;
   width: 80%;
   height: 90%;
-  background: #1a76d1;
+  background: #ffffff;
   opacity: 0;
   filter: blur(10px);
   -webkit-transition: all 0.3s ease-out 0s;
@@ -776,15 +778,15 @@ body {
   font-weight: 600;
   display: inline-block;
   text-transform: capitalize;
-  color: #fff;
+  color: #1a76d1;
   margin-top: 13px;
 }
 .schedule .single-schedule p {
-  color: #fff;
+  color: #1a76d1;
   margin-top: 22px;
 }
 .schedule .single-schedule a {
-  color: #fff;
+  color: #1a76d1;
   margin-top: 25px;
   font-weight: 500;
   display: inline-block;
@@ -4187,6 +4189,10 @@ body {
   margin-bottom: 24px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #fff;
+  width: 100%;
+  max-width: 280px; /* You can adjust this value */
+  max-height: 420px; /* Limit height */
+  overflow: hidden;
 }
 
 .product-card:hover {
@@ -4203,7 +4209,7 @@ body {
 .product-card h3 {
   font-size: 1.25rem;
   margin-bottom: 8px;
-  color: #333;
+  color: #0078d4;
 }
 
 .product-card p {
@@ -4211,5 +4217,20 @@ body {
   font-size: 0.95rem;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.col-lg-3,
+.col-md-6,
+.col-12 {
+  display: flex;
+}
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
+}
