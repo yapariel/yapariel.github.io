@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Perfect Star PC Shoppe</title>
 		<link rel="icon" href="img/favicon.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -187,31 +188,20 @@
 			</div>
 		</footer>
 
-		<div id="messenger-popup" style="
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			background-color: #fff;
-			border: 1px solid #ccc;
-			padding: 15px 20px;
-			border-radius: 10px;
-			box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-			display: none;
-			max-width: 250px;
-			z-index: 9999;
-		">
-			<p style="margin: 0 0 10px 0; font-size: 14px;">Hi, need help?</p>
-			<p>Looking for something specific? <br><a href="https://m.me/OfficialPerfectstarPCShoppe" target="_blank" style="color: #0078FF; text-decoration: underline;">Message us on Messenger</a></p>
-			<button onclick="closePopup()" style="margin-top:5px; background: transparent; border: none; color: #999; font-size: 12px; cursor: pointer;">Close</button>
+		<!-- Chatbot Widget -->
+		<div id="chatbot-widget">
+			<div id="chatbot-header">
+				<span>Ask Ariel Ai</span>
+				<button id="chatbot-toggle"><i class="fas fa-minus"></i></button>
+			</div>
+			<div id="chatbot-body">
+				<div id="chatbot-messages"></div>
+				<div id="chatbot-input-container">
+					<input type="text" id="chatbot-input" placeholder="Ask me anything...">
+					<button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+				</div>
+			</div>
 		</div>
-		<script>
-			setTimeout(function() {
-				document.getElementById('messenger-popup').style.display = 'block';
-			}, 9000);
-			function closePopup() {
-				document.getElementById('messenger-popup').style.display = 'none';
-			}
-		</script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.0.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
@@ -219,5 +209,6 @@
 		<script src="js/slicknav.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/script.js"></script>
     </body>
 </html>
