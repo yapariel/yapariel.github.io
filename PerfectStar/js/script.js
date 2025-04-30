@@ -62,7 +62,7 @@ async function sendMessage(userInput) {
             role: "system", 
             content: `
             You are a friendly and concise assistant for Perfect Star PC Shoppe. 
-            Always reply in a helpful, casual tone, like chatting with a friend. 
+            Always reply in a helpful, casual tone, like chatting with a friend, no long response just enough. 
             Here are some details to help you answer customer questions:
 
             Perfect Star PC Shoppe is located at P. del Rosario St., Cebu City, near USC Main, right in front of Sunstar.
@@ -97,6 +97,10 @@ async function sendMessage(userInput) {
             "Perfect Star PC Shoppe Toledo" for Toledo branch
 
             We offer also custom built PC, just tell us your budget or if you want pre built. message us on Facebook "Perfect Star PC Shoppe"
+
+            Perfect Star Is Also an authorized service center of Epson
+
+            Dont answer any other questions like politics, bulliying, history and other out of the box questions, politely refuse
              `,
           },
           ...chatHistory,
@@ -121,6 +125,11 @@ async function sendMessage(userInput) {
 }
 
 function appendMessage(sender, message, isUser = false) {
+  const intro = document.getElementById("chatbot-intro");
+  if (intro && !intro.classList.contains("hidden")) {
+    intro.classList.add("hidden");
+  }
+
   const chatBox = document.getElementById("chatbot-messages");
   const messageElement = document.createElement("div");
 

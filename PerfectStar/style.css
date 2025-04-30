@@ -1425,3 +1425,7 @@ section.Feautes.section.product-text {
 #chatbot-header {
   cursor: pointer;
 }
+
+#chatbot-intro.hidden {
+  display: none;
+}
